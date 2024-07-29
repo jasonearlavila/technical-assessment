@@ -129,3 +129,4 @@ D:\ProductCustomerDataFetcher\ProductCustomerDataFetcher\obj\Debug\net8.0\refint
 D:\ProductCustomerDataFetcher\ProductCustomerDataFetcher\obj\Debug\net8.0\ProductCustomerDataFetcher.pdb
 D:\ProductCustomerDataFetcher\ProductCustomerDataFetcher\obj\Debug\net8.0\ProductCustomerDataFetcher.genruntimeconfig.cache
 D:\ProductCustomerDataFetcher\ProductCustomerDataFetcher\obj\Debug\net8.0\ref\ProductCustomerDataFetcher.dll
+D:\ProductCustomerDataFetcher\ProductCustomerDataFetcher\obj\Debug\net8.0\ProductCustomerDataFetcher.sourcelink.json
