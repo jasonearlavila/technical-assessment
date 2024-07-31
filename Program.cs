@@ -27,13 +27,13 @@ class Program
         }
     }
 
-    private static T GetJsonData<T>(string url)
+    public static T GetJsonData<T>(string url)
     {
         var jsonString = GetJsonString(url);
         return JsonSerializer.Deserialize<T>(jsonString);
     }
 
-    private static string GetJsonString(string url)
+    public static string GetJsonString(string url)
     {
         var request = (HttpWebRequest)WebRequest.Create(url);
         request.ContentType = "application/json; charset=utf-8";
@@ -47,7 +47,7 @@ class Program
         }
     }
 
-    private static void SaveDataToDatabase(List<Customer_Model> customers, List<Product_Model> products)
+    public static void SaveDataToDatabase(List<Customer_Model> customers, List<Product_Model> products)
     {
         using (var context = new AppDbContext())
         {
