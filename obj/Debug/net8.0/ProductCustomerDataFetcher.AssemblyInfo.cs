@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProductCustomerDataFetcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+815a1fbdba302298d863b250379deec9bb86891e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76314b78e2a786f99f09afed74448080a4918361")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProductCustomerDataFetcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProductCustomerDataFetcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

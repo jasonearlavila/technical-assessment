@@ -19,7 +19,6 @@ class Program
             var productJson = GetJsonData<List<Product_Model>>(ProductsUrl);
 
             SaveDataToDatabase(customerJson, productJson);
-            Console.WriteLine("Data saved successfully.");
         }
         catch (Exception ex)
         {
@@ -51,9 +50,24 @@ class Program
     {
         using (var context = new AppDbContext())
         {
-            context.Customers.AddRange(customers);
-            context.Products.AddRange(products);
-            context.SaveChanges();
+            var existingCustomerIds = context.Customers.Select(c => c.id).ToHashSet();
+            var existingProductIds = context.Products.Select(p => p.id).ToHashSet();
+
+            var newCustomers = customers.Where(c => !existingCustomerIds.Contains(c.id)).ToList();
+            var newProducts = products.Where(p => !existingProductIds.Contains(p.id)).ToList();
+
+            if(newCustomers.Any() || newProducts.Any())
+            {
+                context.Customers.AddRange(customers);
+                context.Products.AddRange(products);
+                context.SaveChanges();
+                Console.WriteLine("Data saved successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Data already exist.");
+            }
+            
         }
     }
 }
